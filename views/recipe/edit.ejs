@@ -1,0 +1,58 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h1>Edit Recipe</h1>
+      <form
+        action="/food/<%=recipe._id%>?_method=PUT"
+        method="post"
+        class="needs-validation"
+        novalidate
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="name" class="form-label">Dish Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            value="<%=recipe.name%>"
+            required
+          />
+          <div class="invalid-feedback">Please Enter Valid Dish Name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="instructions" class="form-label">Instructions</label>
+          <textarea name="instructions" class="form-control" id="" required>
+<%=recipe.instructions%></textarea
+          >
+          <div class="invalid-feedback">Please Enter Valid Instructions.</div>
+        </div>
+        <div class="mb-3">
+          <label for="time" class="form-label">Time</label>
+          <input
+            type="number"
+            required
+            class="form-control"
+            name="time"
+            value="<%=recipe.time%>"
+          />
+          <div class="invalid-feedback">Please Enter Valid Time.</div>
+        </div>
+
+        <div class="mb-3">
+          Original Image :
+          <br />
+
+          <img src="<%=originalUrl%>" alt="" />
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label"></label>
+          <input type="file" name="image" class="form-control" />
+        </div>
+        <button class="btn add-btn">Edit</button>
+      </form>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,55 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h1>Add New Recipe</h1>
+      <form
+        action="/food"
+        method="post"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="name" class="form-label"></label>
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            placeholder="Enter Dish Name"
+            required
+          />
+          <div class="invalid-feedback">Please Povide a valid Dish Name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="instructions" class="form-label"></label>
+          <textarea
+            name="instructions"
+            id=""
+            class="form-control"
+            placeholder="Enter Recipe Instructions"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please Enter Valid Instructions.</div>
+        </div>
+        <div class="mb-3">
+          <label for="time" class="form-label"></label>
+          <input
+            name="time"
+            class="form-control"
+            placeholder="Enter Time To Make"
+            required
+          />
+          <div class="invalid-feedback">Please Enter Valid Time.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label"></label>
+          <input type="file" name="image" class="form-control" required />
+        </div>
+        <br />
+        <button class="btn add-btn">Add</button>
+      </form>
+    </div>
+  </div>
+</body>

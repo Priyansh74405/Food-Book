@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-bowl-food {
+  color: rgb(255, 119, 0);
+  font-size: 2.5rem;
+}
+
+.nav-link {
+  color: rgb(255, 119, 0) !important;
+}
+
+.f-info {
+  display: flex;
+  height: 5rem;
+  background-color: beige;
+  justify-content: center;
+}
+
+.recipe-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.recipe-link {
+  text-decoration: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+.add-btn {
+  background-color: rgb(255, 119, 0) !important;
+}
+
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.btn-edit {
+  background-color: rgb(255, 119, 0) !important;
+}
